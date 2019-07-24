@@ -1,0 +1,255 @@
+<!DOCTYPE html>
+<html dir="ltr" lang="en"><head>
+<meta http-equiv="content-type" content="text/html; charset=UTF-8">
+    <meta charset="utf-8">
+    <title>Estructuras Discretas: Práctica 6</title>
+    <link rel="stylesheet" href="styles.css">
+  </head>
+  <body class="body">
+    <div class="head">
+        <h1>Universidad Nacional Autónoma de México</h1>
+        <h2>Facultad de Ciencias</h2>
+        <h2>Estructuras Discretas</h2>
+        <h2>Práctica 9</h2>
+        <h3 class="color">Karla García</h3>
+        <p>7 de mayo del 2019</p>
+        <p><b>Fecha de Entrega:</b> 21 de mayo del 2019 </p>
+    </div>
+
+    <div>
+      <h2 class="color">Indicaciones Generales</h2>
+      <p>&nbsp;&nbsp; Todas las funciones y definiciones deben estar debidamente
+        comentadas con la especificación de éstas. </p>
+      <p>&nbsp;&nbsp; En el archivo README.txt se debe agregar las indicaciones para compilar
+        y ejecutar la práctica. Así como una breve explicación del modelo usado en la práctica.</p>
+      <p>&nbsp;&nbsp; Se tomará en cuenta la legibilidad y el estilo del código.</p>
+    </div>
+
+    <div>
+      <h2 class="color">Especificación</h2>
+      <p>&nbsp;&nbsp; Implementar en Haskell el juego <i>¿Qué película es? con Emojis</i> 😜🤙🏿.</p>
+      <p>&nbsp;&nbsp; Estas son las reglas del juego:</p>
+      <ul>
+        <li>Se mostrara en la consola una serie de <i>Emojis</i> que representan una película.</li>
+        <li>El jugador tendrá una oportunidad para adivinar de que película se trata
+        escribiéndola en la consola.</li>
+        <li>Se informará al jugador si acertó o no.</li>
+      </ul>
+      <p>&nbsp;&nbsp; El flujo del programa es el siguiente:</p>
+      <ul>
+        <li>Al iniciar el programa mostrar un menú con las siguientes opciones:
+          <div class="terminal">
+            <p class="terminal-content">[1] Jugar 🧩 <br> [2] Instrucciones 📜 <br> [3] Salir ❎</p>
+          </div>
+          y esperar una respuesta del jugador.
+        </li>
+        <li>Si la respuesta es 3, terminar el programa con una despedida.
+          <div class="terminal">
+            <p class="terminal-content">Ok ciao 👋</p>
+          </div>
+        </li>
+        <li> Si la respuesta es 2, imprimir las instrucciones del juego en la consola.
+          <div class="terminal">
+            <p class="terminal-content">Instrucciones: <br>
+              <br>
+              Lorem ipsum dolor sit amet, at est odio corpora invidunt,
+              ornatus voluptatum ei eos. Id quo partem sapientem gubergren,
+              vim ei dico quidam aperiri. Natum exerci appellantur ne vix,
+              ut mei utamur disputationi. Ut graeci eruditi mea. Minim elitr
+              apeirian ei his, ut falli temporibus vel. Cu ius solum fugit
+              sapientem. Iriure nusquam at eum, mel dicam efficiendi neglegentur
+              te, eum munere complectitur no. <br>
+              <br>
+              Presiona intro para continuar</p>
+          </div>
+          Una vez que el jugador haya terminado de leer las instrucciones y presione
+          la tecla intro, regresar al menú principal.
+        </li>
+        <li>Si la respuesta es 1, comenzar el juego.</li>
+        <li>Al comenzar el juego, mostrar los <i>Emojis</i> correspondientes a una
+        película elegida al azar y esperar la respuesta del jugador.
+          <div class="terminal">
+            <p class="terminal-content">¿Cuál es el nombre de la película? <br>
+              🚢 ❤️ 💎 <br>
+            <br></p>
+          </div>
+        </li>
+        <li>Informar al jugador si acertó o no.
+          <div class="terminal">
+            <p class="terminal-content">¿Cuál es el nombre de la película? <br>
+              🚢 ❤️ 💎 <br>
+              Titanic <br>
+              ✅ <br></p>
+          </div>
+          <div class="terminal">
+            <p class="terminal-content">¿Cuál es el nombre de la película? <br>
+              🚢 ❤️ 💎 <br>
+              Frozen <br>
+              ❌<br></p>
+          </div>
+        </li>
+        <li>Invitar al jugador a jugar de nuevo
+          <div class="terminal">
+            <p class="terminal-content">¿Quieres jugar otra vez? (s/n)</p>
+          </div>
+          y esperar su respuesta.
+        </li>
+        <li>Si la respuesta es afirmativa comenzar una partida nuevo, en el caso
+        contrario regresar al menú principal.</li>
+      </ul>
+    </div>
+
+    <div>
+      <h2 class="color">Requerimientos</h2>
+      <ul>
+        <li>El programa debe de ser robusto, es decir poder reaccionar a entradas no esperadas. Por ejemplo:
+          <div class="terminal">
+            <p class="terminal-content">Bienvenido, selecciona una opción: <br>
+                [1] Jugar 🧩 <br> [2] Instrucciones 📜 <br> [3] Salir ❎</p>
+          </div>
+          <div class="terminal">
+            <p class="terminal-content">
+                5 </p>
+          </div>
+          <div class="terminal">
+            <p class="terminal-content">
+                Elige una opción válida.</p>
+          </div>
+        </li>
+        <li>La verificación no debe diferenciar entre mayúsculas y minúsculas. Por ejemplo.
+          <div class="terminal">
+            <p class="terminal-content">¿Cuál es el nombre de la película? <br>
+              🚀 🌔 1️⃣ 3️⃣ <br>
+              Apollo 13 <br>
+              ✅ <br></p>
+          </div>
+          <div class="terminal">
+            <p class="terminal-content">¿Cuál es el nombre de la película? <br>
+              🚀 🌔 1️⃣ 3️⃣ <br>
+              apollo 13 <br>
+              ✅ <br></p>
+          </div>
+        </li>
+        <li>La verificación debe ignorar los espacios en blanco. Por ejemplo.
+          <div class="terminal">
+            <p class="terminal-content">¿Cuál es el nombre de la película? <br>
+              👦 🏠 🎄 ❄️<br>
+              Home Alone<br>
+              ✅ <br></p>
+          </div>
+          <div class="terminal">
+            <p class="terminal-content">¿Cuál es el nombre de la película? <br>
+              👦 🏠 🎄 ❄️<br>
+              HomeAlone<br>
+              ✅ <br></p>
+          </div>
+        </li>
+        <li>La verificación debe ignorar los signos de puntuación. Por ejemplo.
+          <div class="terminal">
+            <p class="terminal-content">¿Cuál es el nombre de la película? <br>
+              👽 👦 🚴 🌔<br>
+              E.T.<br>
+              ✅ <br></p>
+          </div>
+          <div class="terminal">
+            <p class="terminal-content">¿Cuál es el nombre de la película? <br>
+              👽 👦 🚴 🌔<br>
+              ET<br>
+              ✅ <br></p>
+          </div>
+        </li>
+        <li>Tener un mínimo de 120 películas disponibles para el juego.</li>
+        <li>Elegir aleatoriamente la película con la que se va a jugar en cada partida.</li>
+        <li>La interacción con el usuario es a través de la terminal.</li>
+        <li>Modularizar en medida de lo posible el código.</li>
+      </ul>
+    </div>
+
+    <div>
+      <h2 class="color">Ejemplo</h2>
+      <video controls="controls" width="700" height="480">
+        <source src="ejemplo.mp4" type="video/mp4">
+      </video>
+    </div>
+
+    <div>
+      <h2 class="color">Diseño</h2>
+      <p>&nbsp;&nbsp; El diseño de esta práctica es libre, es decir se deja a consideración
+      del alumno mientras cumpla los requerimientos. Por lo que no habrá esqueleto ni archivos auxiliares.</p>
+    </div>
+
+    <div>
+      <h2 class="color">Evaluación</h2>
+      <p>&nbsp;&nbsp; La calificación de la práctica dependera del cumplimiento de los requerimientos y del
+        modelo del programa.</p>
+      <p>&nbsp;&nbsp; <b> En la sesión de laboratorio del día 14 de mayo se hará una revisión de avances que
+        podría influir sobre la calificación final de la Práctica.</b></p>
+    </div>
+
+    <div>
+      <h2 class="color">Extras</h2>
+      <ul>
+        <li>Ignorar en la verificación los artículos. Por ejemplo:
+          <div class="terminal">
+            <p class="terminal-content">¿Cuál es el nombre de la película? <br>
+              👦 💍 🌋<br>
+              The Lord of the rings<br>
+              ✅ <br></p>
+          </div>
+          <div class="terminal">
+            <p class="terminal-content">¿Cuál es el nombre de la película? <br>
+              👦 💍 🌋<br>
+              Lord of the rings<br>
+              ✅ <br></p>
+          </div>
+        </li>
+        <li>Limitar el número de errores a 5 por partida y terminar el juego cuando se alcance el limite. Por ejemplo:
+          <div class="terminal">
+            <p class="terminal-content">¿Cuál es el nombre de la película? ❤️❤️ <br>
+              😈 👗 👠<br>
+              Evil outfit<br>
+              ❌<br></p>
+          </div>
+          <div class="terminal">
+            <p class="terminal-content">¿Cuál es el nombre de la película? ❤️<br>
+              👦 💍 🌋<br>
+              Mountain<br>
+            ❌ <br></p>
+          </div>
+          <div class="terminal">
+            <p class="terminal-content">GAME OVER 😭😭😭<br></p>
+          </div>
+        </li>
+        <li>Llevar un marcador de respuestas correctas.</li>
+      </ul>
+    </div>
+
+    <div>
+      <h2 class="color">Entrega</h2>
+      <ul>
+        <li>La entrega se realiza mediante correo electrónico a la dirección de la
+        ayudante del laboratorio:
+            sgakarla@ciencias.unam.mx</li>
+        
+        <li>La practica deberá ser entregada individualmente.</li>
+        <li>Se debe entregar un directorio numeroCuenta_P09, dónde numeroCuenta es el número de cuenta. Dentro del directorio se debe incluir:
+          <ul>
+            <li> Un archivo README.txt con <b>las instrucciones necesarias
+              para compilar y ejecutar el programa, así como una breve explicación del modelo usado en la práctica</b>,
+              comentarios, opiniones, críticas o ideas sobre la práctica.</li>
+            <li> Los archivos requeridos en la práctica. Debe enviarse código lo más limpio posible.</li>
+          </ul>
+        </li><li>Los archivos requeridos para esta práctica son los necesarios para el correcto funcionamiento de ésta.</li>
+        <li>El directorio se deberá comprimir en un archivo con nombre numeroCuenta_P06.tar.gz, dónde
+            numeroCuenta es el número de cuenta de un integrante del equipo.</li>
+        <li>Únicamente <b>un integrante</b> del equipo deberá enviar el correo con la práctica.</li>
+        <li>El asunto del correo debe ser [ED-20191-P09].</li>
+        <li>Se recibirá la práctica hasta las 23:59:59 horas del día fijado como fecha de entrega, cualquier práctica
+            recibida después no será tomada en cuenta.</li>
+        <li><b>Cualquier práctica total o parcialmente plagiada, será calificada automáticamente con cero
+          y no se aceptarán más prácticas durante el semestre.</b></li>
+      </ul>
+    </div>
+  
+
+</body></html>

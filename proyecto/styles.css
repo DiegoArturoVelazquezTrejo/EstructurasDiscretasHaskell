@@ -1,0 +1,19 @@
+.terminal{
+  background-color: #0c0c0c30;
+  font-family: monospace;
+  font-size: larger;
+}
+.terminal-content{
+  padding: 10px;
+}
+.head{
+  text-align: center;
+}
+.color{
+  color: #8e1028;
+}
+.body{
+  font-family: sans-serif;
+  margin: 150px;
+  line-height: 25px;
+}
